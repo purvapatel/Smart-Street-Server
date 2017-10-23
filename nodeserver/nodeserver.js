@@ -31,10 +31,9 @@ app.get('/userlist/:name', function (req, res) {
 app.post('/userlist', function (req, res) {
   console.log(req.body);
   db.UserDetails.insert(req.body, function(err, doc) {
-    res.json("1");
+    res.json({"success" : "1"});
   });
 });
 
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
+app.listen(3000);
+console.log("Server running on port 3000");
