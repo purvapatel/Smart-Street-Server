@@ -1,6 +1,9 @@
 {
     "name": "product-api",
-    "main": "server.js",
+    "main": "nodeserver.js",
+    "scripts": {
+    "start": "node nodeserver.js"
+  	},
     "dependencies": {
         "express": "~4.0.0",
         "body-parser": "~1.0.1",
