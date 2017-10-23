@@ -10,7 +10,6 @@ app.use(bodyParser.json());
 //get list of users
 app.get('/userlist', function (req, res) {
   console.log('I received a GET request');
-	var name = req.params.name;
   db.UserDetails.find({}, function (err, docs) {
     console.log(docs);
     res.json(docs);
