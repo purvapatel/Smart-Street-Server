@@ -35,6 +35,15 @@ app.post('/userlist', function (req, res) {
   });
 });
 
+
+//insert user profile
+app.post('/userprofile', function (req, res) {
+  console.log(req.body);
+  db.UserProfile.insert(req.body, function(err, doc) {
+    res.json({"success" : "1"});
+  });
+});
+
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
